@@ -1,0 +1,179 @@
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row.reverse {
+	flex-direction: row-reverse;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.column.reverse {
+	flex-direction: column-reverse;
+}
+
+/*
+.box {
+	/* flex-grow: 1;
+	flex-shrink: 1; /
+	/* padrão/
+	/*flex-basis: 0;/
+	/* padrão*/
+	/*flex-basis: auto;/
+	/*flex: 1 1 auto;/
+	/*flex-grow, flex-shrink, flex-basis /
+	/* order: 0;
+	align-self: auto;
+	flex-wrap: wrap; /
+*/
+
+.box,
+.box-1 {
+	/* flex: 1 1 calc(100% / 12); */
+	flex: 1 0 calc(100% / 12);
+}
+
+.box-2 {
+	flex: 1 0 calc(100% / 12 * 2);
+}
+
+.box-3 {
+	flex: 1 0 calc(100% / 12 * 3);
+}
+
+.box-4 {
+	flex: 1 0 calc(100% / 12 * 4);
+}
+
+.box-5 {
+	flex: 1 0 calc(100% / 12 * 5);
+}
+
+.box-6 {
+	flex: 1 0 calc(100% / 12 * 6);
+}
+
+.box-7 {
+	flex: 1 0 calc(100% / 12 * 7);
+}
+
+.box-8 {
+	flex: 1 0 calc(100% / 12 * 8);
+}
+
+.box-9 {
+	flex: 1 0 calc(100% / 12 * 9);
+}
+
+.box-10 {
+	flex: 1 0 calc(100% / 12 * 10);
+}
+
+.box-11 {
+	flex: 1 0 calc(100% / 12 * 11);
+}
+
+.box-12 {
+	flex: 1 0 100%;
+}
+
+.flex-justify-start>*,
+.flex-justify-end>*,
+.flex-justify-center>*,
+.flex-justify-space-between>*,
+.flex-justify-space-around>* {
+	flex-grow: 0;
+}
+
+.flex-justify-start {
+	justify-content: flex-start;
+}
+
+.flex-justify-end {
+	justify-content: flex-end;
+}
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.flex-justify-space-between {
+	justify-content: space-between;
+}
+
+.flex-justify-space-around {
+	justify-content: space-around;
+}
+
+.flex-align-boxes-stretch {
+	align-items: stretch;
+}
+
+.flex-align-boxes-start {
+	align-items: flex-start;
+}
+
+.flex-align-boxes-end {
+	align-items: flex-end;
+}
+
+.flex-align-boxes-center {
+	align-items: center;
+}
+
+.flex-align-boxes-baseline {
+	align-items: baseline;
+}
+
+.box-align-auto {
+	align-self: auto;
+}
+
+.box-align-start {
+	align-self: flex-start;
+}
+
+.box-align-end {
+	align-self: flex-end;
+}
+
+.box-align-center {
+	align-self: center;
+}
+
+.box-align-baseline {
+	align-self: baseline;
+}
+
+.box-align-stretch {
+	align-self: stretch;
+}
+
+@media screen and (max-width: 768px) {
+
+	.row,
+	.column,
+	.box,
+	.box-1,
+	.box-2,
+	.box-3,
+	.box-4,
+	.box-5,
+	.box-6,
+	.box-7,
+	.box-8,
+	.box-9,
+	.box-10,
+	.box-11,
+	.box-12 {
+		min-width: 100%;
+		width: 100%;
+		flex: 1 0 100%;
+		display: block;
+	}
+}
+

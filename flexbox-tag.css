@@ -1,0 +1,226 @@
+/*!
+ *  _____ _           _                __  __
+ * |  ___| | _____  _| |__   _____  __ \ \/ /
+ * | |_  | |/ _ \ \/ / '_ \ / _ \ \/ /  \  /
+ * |  _| | |  __/>  <| |_) | (_) >  <   /  \
+ * |_|   |_|\___/_/\_\_.__/ \___/_/\_\ /_/\_\
+ *
+ * Created by Natan Felles <natanfelles@gmail.com>
+ * 2019-02-20 18:12:33 - America/Sao_Paulo
+ *
+ * TODO: Simple JS Autonomous custom element - order="x" with js and, maybe, box[size="x"] to
+ * order can be set with custom user css or js
+ */
+row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+row[reverse] {
+	flex-direction: row-reverse;
+}
+
+column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+column[reverse] {
+	flex-direction: column-reverse;
+}
+
+row[wrap],
+column[wrap] {
+	flex-wrap: wrap;
+}
+
+row[wrap="reverse"],
+column[wrap="reverse"] {
+	flex-wrap: wrap-reverse;
+}
+
+row[justify-content]>* {
+	flex-grow: 0;
+}
+
+row[justify-content="start"],
+column[justify-content="start"] {
+	justify-content: flex-start;
+}
+
+row[justify="end"],
+column[justify="end"] {
+	justify-content: flex-end;
+}
+
+row[justify-content="center"],
+column[justify-content="center"] {
+	justify-content: center;
+}
+
+row[justify-content="space-between"],
+column[justify-content="space-between"] {
+	justify-content: space-between;
+}
+
+row[justify-content="space-around"],
+column[justify-content="space-around"] {
+	justify-content: space-around;
+}
+
+row[align-items="stretch"],
+column[align-items="stretch"] {
+	align-items: stretch;
+}
+
+row[align-items="flex-start"],
+column[align-items="flex-start"] {
+	align-items: flex-start;
+}
+
+row[align-items="flex-end"],
+column[align-items="flex-end"] {
+	align-items: flex-end;
+}
+
+row[align-items="center"],
+column[align-items="center"] {
+	align-items: center;
+}
+
+row[align-items="baseline"],
+column[align-items="baseline"] {
+	align-items: baseline;
+}
+
+row[align-content="baseline"],
+column[align-content="baseline"] {
+	align-content: stretch;
+}
+
+row[align-content="flex-start"],
+column[align-content="flex-start"] {
+	align-content: flex-start;
+}
+
+row[align-content="flex-end"],
+column[align-content="flex-end"] {
+	align-content: flex-end;
+}
+
+row[align-content="center"],
+column[align-content="center"] {
+	align-content: center;
+}
+
+row[align-content="space-between"],
+column[align-content="space-between"] {
+	align-content: space-between;
+}
+
+row[align-content="space-around"],
+column[align-content="space-around"] {
+	align-content: space-around;
+}
+
+/*
+box,
+row > row,
+row > column,
+column > row,
+column > column
+*/
+
+box {
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	flex: 0 1 auto;
+}
+
+box,
+box[size="1"] {
+	flex: 1 0 calc(100% / 12);
+}
+
+box[size="2"] {
+	flex: 1 0 calc(100% / 12 * 2);
+}
+
+box[size="3"] {
+	flex: 1 0 calc(100% / 12 * 3);
+}
+
+box[size="4"] {
+	flex: 1 0 calc(100% / 12 * 4);
+}
+
+box[size="5"] {
+	flex: 1 0 calc(100% / 12 * 5);
+}
+
+box[size="6"] {
+	flex: 1 0 calc(100% / 12 * 6);
+}
+
+box[size="7"] {
+	flex: 1 0 calc(100% / 12 * 7);
+}
+
+box[size="8"] {
+	flex: 1 0 calc(100% / 12 * 8);
+}
+
+box[size="9"] {
+	flex: 1 0 calc(100% / 12 * 9);
+}
+
+box[size="10"] {
+	flex: 1 0 calc(100% / 12 * 10);
+}
+
+box[size="11"] {
+	flex: 1 0 calc(100% / 12 * 11);
+}
+
+box[size="12"] {
+	flex: 1 0 100%;
+}
+
+box[align-self="auto"] {
+	align-self: auto;
+}
+
+box[align-self="flex-start"] {
+	align-self: flex-start;
+}
+
+box[align-self="flex-end"] {
+	align-self: flex-end;
+}
+
+box[align-self="center"] {
+	align-self: center;
+}
+
+box[align-self="baseline"] {
+	align-self: baseline;
+}
+
+box[align-self="stretch"] {
+	align-self: stretch;
+}
+
+@media screen and (max-width: 768px) {
+
+	row,
+	column,
+	box {
+		min-width: 100%;
+		width: 100%;
+		flex: 1 0 100%;
+		display: block;
+	}
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Flexbox X - Tag</title>
+	<link rel="stylesheet" type="text/css" href="../flexbox-tag.css">
+	<style type="text/css">
+
+		row,
+		column,
+		box {
+			background-color: rgba(0, 0, 0, .05);
+			box-shadow: inset 0 0 1px blue;
+			color: red;
+		}
+
+		.r1 {
+			background-color: rgba(255, 255, 0, .15);
+		}
+
+		.r2 {
+			background-color: rgba(102, 102, 255, .15);
+		}
+
+		.r3 {
+			background-color: rgba(153, 255, 153, .15);
+		}
+
+		.r4 {
+			background-color: rgba(0, 153, 255, .15);
+		}
+
+		.r5 {
+			background-color: rgba(255, 204, 204, .15);
+		}
+
+		.r6 {
+			background-color: rgba(0, 204, 0, .15);
+		}
+
+		.r7 {
+			background-color: rgba(255, 153, 153, .15);
+		}
+
+	</style>
+</head>
+
+<body>
+	<row class="r1">
+		<box>
+			row > box
+		</box>
+		<box>
+			row > box
+		</box>
+		<box size="3">
+			<column>
+				<box>
+					row > box[3] > column > box
+				</box>
+				<box>
+					row > box[3] > column > box
+				</box>
+				<box>
+					<row>
+						<box>
+							row > box[3] > column > box > row > box
+						</box>
+						<box>
+							row > box[3] > column > box > row > box
+						</box>
+						<box>
+							<column>
+								<box>
+									row > box[3] > column > box > row > box > column > box
+								</box>
+								<box>
+									row > box[3] > column > box > row > box > column > box
+								</box>
+							</column>
+						</box>
+						<box>
+							row > box-3 > column > box > row > box
+						</box>
+					</row>
+				</box>
+				<box>
+					row > box[3] > column > box
+				</box>
+			</column>
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="2">
+			row > box[2]
+		</box>
+	</row>
+
+	<!-- ··································································· -->
+
+	<row class="r2" reverse>
+		<box>
+			row[reverse] > box
+		</box>
+		<box>
+			row[reverse] > box
+		</box>
+		<box size="3">
+			<column>
+				<box>
+					row[reverse] > box[3] > column > box
+				</box>
+				<box>
+					row[reverse] > box[3] > column > box
+				</box>
+				<box>
+					<row>
+						<box>
+							row[reverse] > box[3] > column > box > row[reverse] > box
+						</box>
+						<box>
+							row[reverse] > box[3] > column > box > row[reverse] > box
+						</box>
+						<box>
+							<column>
+								<box>
+									row[reverse] > box[3] > column > box > row[reverse] > box > column > box
+								</box>
+								<box>
+									row[reverse] > box[3] > column > box > row[reverse] > box > column > box
+								</box>
+							</column>
+						</box>
+						<box>
+							row[reverse] > box-3 > column > box > row[reverse] > box
+						</box>
+					</row>
+				</box>
+				<box>
+					row[reverse] > box[3] > column > box
+				</box>
+			</column>
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="2">
+			row > box[2]
+		</box>
+	</row>
+	<!-- ··································································· -->
+	<row class="r3">
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			<div style="background: yellow; margin: 30px 0 60px">row > box[1] > div</div>
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1" align-self="baseline">
+			row > box[1][align-self=baseline]
+		</box>
+		<box  align-self="flex-start">
+			row > box[1][align-self=flex-start]
+		</box>
+		<box align-self="flex-end">
+			row > box[1][align-self=flex-end]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+		<box size="1">
+			row > box[1]
+		</box>
+	</row>
+
+	<script>
+		var e = document.querySelectorAll('box');
+		for (var i = e.length - 1; i >= 0; i--) {
+			e[i].innerHTML = '<span style="color:black">' + i + ':</span> '
+				+ e[i].innerHTML;
+		}
+
+	</script>
+</body>
+
+</html>
