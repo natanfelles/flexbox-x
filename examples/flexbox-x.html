@@ -2,10 +2,75 @@
 <html>
 
 <head>
-	<title>Flexbox X</title>
+	<title>Flexbox-x X</title>
+	<style>
+		row-x,
+		column-x,
+		box-x {
+			background-color: rgba(0, 0, 0, .05);
+			box-shadow: inset 0 0 1px blue;
+			color: red;
+		}
+
+		.r1 {
+			background-color: rgba(255, 255, 0, .15);
+		}
+
+	</style>
 </head>
 
 <body>
+	<row-x class="r1" id="r1">
+		<box-x>
+			row-x > box-x
+		</box-x>
+		<box-x>
+			row-x > box-x
+		</box-x>
+		<box-x size="3">
+			<column-x>
+				<box-x>
+					row-x > box-x[3] > column-x > box-x
+				</box-x>
+				<box-x>
+					row-x > box-x[3] > column-x > box-x
+				</box-x>
+				<box-x>
+					<row-x>
+						<box-x>
+							row-x > box-x[3] > column-x > box-x > row-x > box-x
+						</box-x>
+						<box-x>
+							row-x > box-x[3] > column-x > box-x > row-x > box-x
+						</box-x>
+						<box-x>
+							<column-x>
+								<box-x>
+									row-x > box-x[3] > column-x > box-x > row-x > box-x > column-x > box-x
+								</box-x>
+								<box-x>
+									row-x > box-x[3] > column-x > box-x > row-x > box-x > column-x > box-x
+								</box-x>
+							</column-x>
+						</box-x>
+						<box-x>
+							row-x > box-x-3 > column-x > box-x > row-x > box-x
+						</box-x>
+					</row-x>
+				</box-x>
+				<box-x>
+					row-x > box-x[3] > column-x > box-x
+				</box-x>
+			</column-x>
+		</box-x>
+		<box-x size="1">
+			row-x > box-x[1]
+		</box-x>
+		<box-x size="2">
+			row-x > box-x[2]
+		</box-x>
+	</row-x>
+	<script src="../flexbox-x.js"></script>
 </body>
 
 </html>
